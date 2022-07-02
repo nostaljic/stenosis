@@ -17,9 +17,9 @@ def move(file,file_destination):
 
 # label can be changed so it need to be passed by param
 def isNormalOrNot(filename,label):
-    if label[int(filename[0:1])] == "0":
+    if label[int(filename.split("_")[0])] == "0":
         return True
-    elif label[int(filename[0:1])] == "1":
+    elif label[int(filename.split("_")[0])] == "1":
         return False
 def __main__():
     for file in Path(file_source).glob('./*.jpg'):
